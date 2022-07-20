@@ -1,0 +1,15 @@
+package com.example.securityWithJwt.Controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+@RestController
+public class welcome 
+{
+	@GetMapping("/")
+	public  String welcome()
+	{
+		return "hello";
+				
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.example.EmpService.Controller;
+
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+
+@RestController
+@RequestMapping("/emp")
+public class empController
+{
+//	@Autowired
+//	empRepo repo;
+	
+	@PostMapping("/save")
+	public String save()
+	{
+//		repo.save(e);
+		return "hello";
+	}
+	
+
+}

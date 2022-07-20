@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.example.EurekaServer&apos; to &apos;EurekaServer/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;EurekaServer&apos;&#x0D;&#x0A;- Destination element: &apos;EurekaServer/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;EurekaServer/src/main/java/com.example.EurekaServer&apos;" description="Copy package" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.EurekaServer" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1657713106880" version="1.0"/>
+</session>

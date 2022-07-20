@@ -1,0 +1,39 @@
+package com.example.locService.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.locService.model.Location;
+import com.example.locService.repository.Locationrepo;
+
+@RestController
+@RequestMapping("/loc")
+public class LocationcController
+{
+	@Autowired
+	Locationrepo repo;
+	
+	
+	@PostMapping("/save")
+	public String save(@RequestBody Location l)
+	{
+		repo.save(l);
+		return "registered";
+	}
+	
+	@GetMapping("/get")
+	public List<Location> getdept()
+	{
+		List<Location> loc=repo.findAll();
+		return loc;
+	}
+	
+
+}

@@ -1,0 +1,78 @@
+package com.example.securityWithJwt.Controller;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.securityWithJwt.Entity.AuthRequest;
+import com.example.securityWithJwt.util.JwtUtil;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+
+	
+	
+	@RestController
+	@RequestMapping("/jwt")
+	public class welcomeController 
+	{
+		@Autowired
+		private RestTemplate restTemplate;
+		
+		
+		@Autowired
+		private JwtUtil jwtutil;
+		
+	    @Autowired
+		private AuthenticationManager authmanager;
+	
+		
+		@GetMapping("/")
+		public  String welcome()
+		{
+			return "hello";
+					
+		}
+		@PostMapping("/authenticate")
+		public String generateToken(@RequestBody AuthRequest authrequest) throws Exception
+		{
+			try {
+				authmanager.authenticate(new UsernamePasswordAuthenticationToken(authrequest.getUserName(), authrequest.getPassword()));
+			}
+			catch(Exception e)
+			{
+				throw new Exception("Invalid username and password");
+			}
+			
+			return jwtutil.generateToken(authrequest.getUserName());
+		}
+		
+		
+		@GetMapping("/getemp")
+		public List<Object> getemp()
+		{
+			Object[] emp=restTemplate.getForObject("http://Hrservice/HR/getemp", Object[].class);
+			return Arrays.asList(emp);
+			
+		}
+		
+		@PostMapping("/postemp")
+		public void getemp()
+		{
+			restTemplate.postForObject("http://Hrservice/HR/getemp", .class);
+			return Arrays.asList(emp);
+			
+		}
+		
+		
+	}
+
+

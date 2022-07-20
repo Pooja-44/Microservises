@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Location.java&apos; to &apos;HrService/src/main/java/com.example.HrService.model&apos;&#x0D;&#x0A;- Original project: &apos;LocationService&apos;&#x0D;&#x0A;- Destination element: &apos;HrService/src/main/java/com.example.HrService.model&apos;&#x0D;&#x0A;- Original element: &apos;com.example.locService.model.Location.java&apos;" description="Copy compilation unit" destination="=HrService/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.HrService.model" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.locService.model{Location.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1657791152498" units="1" version="1.0"/>
+</session>

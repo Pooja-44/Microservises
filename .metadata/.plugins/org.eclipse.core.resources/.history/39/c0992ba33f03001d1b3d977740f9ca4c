@@ -1,0 +1,5 @@
+package com.example.locService.repository;
+
+public interface Locationrepo {
+
+}

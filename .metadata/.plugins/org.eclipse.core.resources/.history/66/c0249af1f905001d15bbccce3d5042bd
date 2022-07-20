@@ -1,0 +1,38 @@
+package com.example.securityWithJwt;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+//import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
+import com.example.securityWithJwt.Entity.User;
+import com.example.securityWithJwt.repository.UserRepo;
+
+
+
+@SpringBootApplication
+//@EnableDiscoveryClient
+public class SecurityWithJwtApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SecurityWithJwtApplication.class, args);
+		
+	}
+	@Autowired
+	UserRepo repo;
+	
+   @PostConstruct
+	public void initUser()
+	{
+		List<User> users=new ArrayList<>();
+		users.add(new User(101, "user", "user@123", "user@gmail.com"));
+		
+		repo.saveAll(users);
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.example.EmpService.Model;
+
+public class Emp {
+
+}

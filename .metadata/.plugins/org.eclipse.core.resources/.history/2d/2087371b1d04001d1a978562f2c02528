@@ -1,0 +1,10 @@
+predicates: ''
+server:
+  port: 8083
+spring:
+  application:
+    name: apigateway
+  cloud:
+    gateway:
+      routes: 'id:'
+uri: ''

@@ -1,0 +1,50 @@
+package com.example.securityWithJwt.Controller;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.securityWithJwt.Entity.AuthRequest;
+import com.example.securityWithJwt.util.JwtUtil;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+
+
+	
+	
+	@RestController
+	public class welcomeController 
+	{
+		@Autowired
+		private JwtUtil jwtutil;
+		
+	    @Autowired
+		private AuthenticationManager authmanager;
+	
+		
+		@GetMapping("/")
+		public  String welcome()
+		{
+			return "hello";
+					
+		}
+		@PostMapping("/authenticate")
+		public String generateToken(@RequestBody AuthRequest authrequest) throws Exception
+		{
+			try {
+				authmanager.authenticate(new UsernamePasswordAuthenticationToken(authrequest.getUserName(), authrequest.getPassword()));
+			}
+			catch(Exception e)
+			{
+				throw new Exception("Invalid username and password");
+			}
+			
+			return jwtutil.generateToken(authrequest.getUserName());
+		}
+
+	}
+
+

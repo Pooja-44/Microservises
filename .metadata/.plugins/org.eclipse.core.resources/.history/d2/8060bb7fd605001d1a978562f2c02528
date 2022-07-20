@@ -1,0 +1,5 @@
+package com.example.securityWithJwt.service;
+
+public class UserService {
+
+}

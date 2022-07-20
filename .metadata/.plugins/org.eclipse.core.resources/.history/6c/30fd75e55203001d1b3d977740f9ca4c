@@ -1,0 +1,8 @@
+package com.example.HrService.model;
+
+public class Snippet {
+	public static void main(String[] args) {
+		com.example.HrService.model
+	}
+}
+

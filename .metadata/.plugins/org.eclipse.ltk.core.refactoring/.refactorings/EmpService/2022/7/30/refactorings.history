@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Emp.java&apos; to &apos;securityWithJwt/src/main/java/com.example.securityWithJwt.Entity&apos;&#x0D;&#x0A;- Original project: &apos;EmpService&apos;&#x0D;&#x0A;- Destination element: &apos;securityWithJwt/src/main/java/com.example.securityWithJwt.Entity&apos;&#x0D;&#x0A;- Original element: &apos;com.example.EmpService.Model.Emp.java&apos;" description="Copy compilation unit" destination="=securityWithJwt/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.securityWithJwt.Entity" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.EmpService.Model{Emp.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1658167132318" units="1" version="1.0"/>
+</session>

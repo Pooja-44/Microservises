@@ -1,0 +1,18 @@
+package com.example.deptService.deptController;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/dept")
+public class DeptController 
+{
+
+	@RequestMapping("/welcome")
+	public String welcome()
+	{
+		return "hello";
+	}
+	
+}

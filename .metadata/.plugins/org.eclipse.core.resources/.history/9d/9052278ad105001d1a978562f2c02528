@@ -1,0 +1,5 @@
+package com.example.securityWithJwt.Entity;
+
+public class User {
+
+}

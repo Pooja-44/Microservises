@@ -1,0 +1,2 @@
+spring.application.name=empservice
+server.port=8086

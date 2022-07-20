@@ -1,0 +1,20 @@
+
+server:
+  port: 8083
+    
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+       - id: emp
+         uri: http://localhost:8001/
+         predicates:
+         - Path=/emp/**
+
+       - id: dept
+         uri: http://localhost:8001/
+         predicates:
+         - Path=/dept/**
+  

@@ -1,0 +1,11 @@
+
+server:
+  port: 8083
+    
+spring:
+  cloud:
+    gateway:
+      routes: 
+      - id: empservice
+        uri: http://localhost:8001
+         predicates:-path=/emp/**

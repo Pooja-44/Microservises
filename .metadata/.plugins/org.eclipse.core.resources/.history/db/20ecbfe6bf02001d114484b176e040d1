@@ -1,0 +1,13 @@
+
+spring.application.name=empservice
+
+
+
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=Employee
+
+
+spring.profiles.active=native
+server.port=8888
+spring.cloud.config.server.native.search-locations=classpath:/common-config

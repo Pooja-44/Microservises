@@ -1,0 +1,11 @@
+package com.example.deptService.deptController;
+
+public class deptController 
+{
+
+	public String welcome()
+	{
+		return "hello"
+	}
+	
+}

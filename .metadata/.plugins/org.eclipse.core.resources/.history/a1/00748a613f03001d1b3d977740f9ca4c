@@ -1,0 +1,5 @@
+package com.example.locService.model;
+
+public class Location {
+
+}

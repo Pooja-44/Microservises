@@ -1,0 +1,5 @@
+package com.example.securityWithJwt.config;
+
+public class securityConfig {
+
+}
